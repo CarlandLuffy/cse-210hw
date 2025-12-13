@@ -23,11 +23,6 @@ namespace Foundation2
             return _productId;
         }
 
-        public double GetPrice()
-        {
-            return _price;
-        }
-
         public double GetTotalCost(int quantity)
         {
             return _price * quantity;

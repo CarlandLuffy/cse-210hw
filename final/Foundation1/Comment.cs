@@ -4,18 +4,30 @@ namespace Foundation1
 {
     public class Comment
     {
-        public string CommenterName { get; set; }
-        public string Text { get; set; }
+  
+        private string _commenterName;
+        private string _text;
 
         public Comment(string commenterName, string text)
         {
-            CommenterName = commenterName;
-            Text = text;
+            _commenterName = commenterName;
+            _text = text;
+        }
+
+
+        public string GetCommenterName()
+        {
+            return _commenterName;
+        }
+
+        public string GetText()
+        {
+            return _text;
         }
 
         public void DisplayComment()
         {
-            Console.WriteLine("- " + CommenterName + ": " + Text);
+            Console.WriteLine("- " + _commenterName + ": " + _text);
         }
     }
 }

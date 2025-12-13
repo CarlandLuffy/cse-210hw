@@ -5,34 +5,62 @@ namespace Foundation1
 {
     public class Video
     {
-        public string Title { get; set; }
-        public string Author { get; set; }
-        public int LengthInSeconds { get; set; }
-        public List<Comment> Comments { get; set; }
+       
+        private string _title;
+        private string _author;
+        private int _lengthInSeconds;
+
+        private List<Comment> _comments;
 
         public Video(string title, string author, int lengthInSeconds)
         {
-            Title = title;
-            Author = author;
-            LengthInSeconds = lengthInSeconds;
-            Comments = new List<Comment>();
+            _title = title;
+            _author = author;
+            _lengthInSeconds = lengthInSeconds;
+
+            
+            _comments = new List<Comment>();
+        }
+
+      
+        public string GetTitle()
+        {
+            return _title;
+        }
+
+        public string GetAuthor()
+        {
+            return _author;
+        }
+
+        public int GetLengthInSeconds()
+        {
+            return _lengthInSeconds;
+        }
+
+       
+        public void AddComment(Comment comment)
+        {
+            _comments.Add(comment);
         }
 
         public int GetCommentCount()
         {
-            return Comments.Count;
+            return _comments.Count;
         }
 
         public void DisplayVideoDetails()
         {
-            Console.WriteLine("Title: " + Title);
-            Console.WriteLine("Author: " + Author);
-            Console.WriteLine("Length (seconds): " + LengthInSeconds);
+            Console.WriteLine("Title: " + _title);
+            Console.WriteLine("Author: " + _author);
+            Console.WriteLine("Length (seconds): " + _lengthInSeconds);
             Console.WriteLine("Number of comments: " + GetCommentCount());
             Console.WriteLine("Comments:");
 
-            foreach (Comment comment in Comments)
+          
+            for (int i = 0; i < _comments.Count; i++)
             {
+                Comment comment = _comments[i];
                 comment.DisplayComment();
             }
 

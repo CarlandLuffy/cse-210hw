@@ -1,6 +1,15 @@
 using System;
 using System.Collections.Generic;
 
+// CSE 210 – Programming with Classes
+// Final Project: Foundation 4 Option
+// This project uses the Foundation 4 final project option, which consists of
+// four separate programs demonstrating the core principles of object-oriented
+// programming: Abstraction, Encapsulation, Inheritance, and Polymorphism.
+
+
+
+
 namespace Foundation4
 {
     class Program

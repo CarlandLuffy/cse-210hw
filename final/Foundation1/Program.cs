@@ -27,7 +27,7 @@ namespace Foundation1
 
             Video video1 = new Video("Luffy vs Kaido", "One Piece Channel", 1200);
 
-            // ✅ UPDATED: use AddComment() (instead of video1.Comments.Add)
+          
             video1.AddComment(new Comment("ZoroFan", "This fight is insane!"));
             video1.AddComment(new Comment("NamiLover", "The animation is so good."));
             video1.AddComment(new Comment("UsoppGod", "I watched this 5 times."));
